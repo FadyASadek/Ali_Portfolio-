@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ali Elbana - Portfolio Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+      .about-modern {
+        padding-top: 7em;
+        padding-bottom: 7em;
+      }
+
+
+      .about-mini-title {
+        display: inline-block;
+        color: #ffbd39;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .about-main-title {
+        font-size: 42px;
+        font-weight: 800;
+        line-height: 1.2;
+        color: #fff;
+        max-width: 700px;
+      }
+
+      .about-role-line {
+        font-size: 18px;
+        font-weight: 500;
+        color: #ffbd39;
+        margin-bottom: 18px;
+        line-height: 1.8;
+      }
+
+      .about-role-line span {
+        color: rgba(255,255,255,0.35);
+        margin: 0 8px;
+      }
+
+      .about-modern-desc {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 16px;
+        line-height: 1.9;
+        max-width: 680px;
+        margin-bottom: 30px;
+      }
+
+      .about-image-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .about-image-card {
+        width: 100%;
+        max-width: 420px;
+        padding: 18px;
+        border-radius: 24px;
+        background: linear-gradient(145deg, #111111, #080808);
+        border: 1px solid rgba(255, 189, 57, 0.18);
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+      }
+
+      .about-main-image {
+        min-height: 520px;
+        width: 100%;
+        border-radius: 18px;
+        background-size: cover;
+        background-position: center top;
+      }
+
+      .about-info-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+        gap: 16px;
+        margin-top: 28px;
+      }
+
+      .about-info-card {
+        background: #111111;
+        border: 1px solid rgba(255,255,255,0.06);
+        border-radius: 18px;
+        padding: 16px 18px;
+        transition: all 0.3s ease;
+      }
+
+      .about-info-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(255, 189, 57, 0.35);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.22);
+      }
+
+      .about-info-card .label {
+        display: block;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: rgba(255,255,255,0.45);
+        margin-bottom: 8px;
+      }
+
+      .about-info-card h4 {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 500;
+        color: #fff;
+        line-height: 1.6;
+        word-break: break-word;
+      }
+
+      .about-bottom-wrap {
+        margin-top: 28px;
+      }
+
+      .about-stats-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin-bottom: 26px;
+      }
+
+      .about-stats-box .stat-item {
+        min-width: 180px;
+        background: #111111;
+        border: 1px solid rgba(255, 189, 57, 0.15);
+        border-radius: 18px;
+        padding: 18px 24px;
+      }
+
+      .about-stats-box .stat-item h3 {
+        margin: 0 0 6px;
+        font-size: 32px;
+        font-weight: 800;
+        color: #ffbd39;
+        line-height: 1;
+      }
+
+      .about-stats-box .stat-item p {
+        margin: 0;
+        color: rgba(255,255,255,0.72);
+        font-size: 14px;
+      }
+
+      .about-action-buttons .btn {
+        border-radius: 999px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .about-action-buttons .btn-primary {
+        box-shadow: 0 10px 24px rgba(255, 189, 57, 0.18);
+      }
+
+      .about-action-buttons .btn-outline-white {
+        border: 1px solid rgba(255,255,255,0.2) !important;
+        color: #fff !important;
+        background: transparent !important;
+      }
+
+      .about-action-buttons .btn-outline-white:hover {
+        border-color: #ffbd39 !important;
+        color: #ffbd39 !important;
+      }
+      .hero {
+  position: relative;
+  background: radial-gradient(circle at 20% 30%, rgba(255,189,57,0.15), transparent 40%),
+              radial-gradient(circle at 80% 70%, rgba(255,189,57,0.08), transparent 40%),
+              #000;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255,189,57,0.15), transparent 70%);
+  top: -100px;
+  left: -100px;
+  filter: blur(80px);
+  animation: moveGlow 8s infinite alternate ease-in-out;
+}
+
+@keyframes moveGlow {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(100px, 80px);
+  }
+}
+
+      @media (max-width: 991.98px) {
+        .about-main-title {
+          font-size: 34px;
+        }
+
+        .about-main-image {
+          min-height: 420px;
+        }
+
+        .about-info-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .about-modern {
+          padding-top: 5em;
+          padding-bottom: 5em;
+        }
+
+        .about-main-title {
+          font-size: 28px;
+        }
+
+        .about-role-line {
+          font-size: 16px;
+        }
+
+        .about-image-card {
+          max-width: 360px;
+          margin-bottom: 30px;
+        }
+
+        .about-main-image {
+          min-height: 360px;
+        }
+
+        .about-stats-box {
+          flex-direction: column;
+        }
+
+        .about-action-buttons .btn {
+          display: block;
+          width: 100%;
+          margin-right: 0 !important;
+          margin-bottom: 12px;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="images/alielbana.png" alt="Logo" class="logo" style="height: 120px; width: auto;">
+        </a>
+
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+            <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+            <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
+            <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+            <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
+            <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home-section" class="hero">
+      <div class="home-slider owl-carousel">
+        <div class="slider-item">
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+              <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_11.png); width: 500px; height:auto;">
+                <div class="overlay"></div>
+              </div>
+
+              <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                <div class="text">
+                  <span class="subheading">Hello!</span>
+                  <h1 class="mb-4 mt-3">I'm <span>Ali Elbana</span></h1>
+                  <h2 class="mb-4">UI/UX Designer & Graphic Designer</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="ftco-about img ftco-section ftco-no-pb about-modern" id="about-section">
+      <div class="container">
+        <div class="row d-flex align-items-center">
+          <div class="col-md-6 col-lg-5 d-flex">
+            <div class="img-about img d-flex align-items-stretch w-100">
+              <div class="about-image-wrap w-100 ftco-animate">
+                <div class="about-image-card">
+                  <div class="img about-main-image" style="background-image:url(images/bg_1.png);"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+            <div class="row justify-content-start pb-3">
+              <div class="col-md-12 heading-section ftco-animate">
+                <span class="about-mini-title">About Me</span>
+                <h1 class="big">About</h1>
+                <h2 class="mb-4 about-main-title">Designing Clear, Modern, and Engaging Visual Experiences</h2>
+
+                <p class="about-role-line">
+                  Graphic Designer <span>•</span> UI/UX Designer
+                </p>
+
+                <p class="about-modern-desc">
+                  a creative designer focused on building modern interfaces and strong visual identities.
+                  work combines clarity, creativity, and functionality to deliver engaging digital experiences.
+                </p>
+
+                <div class="about-info-grid">
+                  <div class="about-info-card">
+                    <span class="label">Name</span>
+                    <h4>Ali Mohamed Ali</h4>
+                  </div>
+
+                  <div class="about-info-card">
+                    <span class="label">Location</span>
+                    <h4>Cairo, Egypt</h4>
+                  </div>
+
+                  <div class="about-info-card">
+                    <span class="label">Email</span>
+                    <h4>alielbana2001@gmail.com</h4>
+                  </div>
+
+                  <div class="about-info-card">
+                    <span class="label">Specialization</span>
+                    <h4>UI/UX Design & Graphic Design</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="counter-wrap ftco-animate d-flex mt-md-3 about-bottom-wrap">
+              <div class="text w-100">
+                <div class="about-stats-box">
+                  <div class="stat-item">
+                    <h3><span class="number" data-number="45">0</span>+</h3>
+                    <p>Projects Completed</p>
+                  </div>
+
+                  <div class="stat-item">
+                    <h3>2+</h3>
+                    <p>Core Fields</p>
+                  </div>
+                </div>
+
+                <div class="about-action-buttons">
+                  <p class="mb-0">
+                    <a href="https://drive.google.com/file/d/1GQ2wSI0Kw-maZcw_K8WXU4-rJP0Tb409/view?usp=sharing" target="_blank" class="btn btn-primary py-3 px-4 mr-3">
+                      Download CV
+                    </a>
+                    <a href="#contact-section" class="btn btn-white btn-outline-white py-3 px-4">
+                      Contact Me
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section" id="services-section">
+      <div class="container">
+        <div class="row justify-content-center py-5 mt-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Services</h1>
+            <h2 class="mb-4">Services</h2>
+            <p>
+              I provide creative design solutions focused on user experience, visual identity,
+              and modern digital interfaces.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 text-center d-flex ftco-animate">
+            <a href="#" class="services-1">
+              <span class="icon">
+                <i class="flaticon-ideas"></i>
+              </span>
+              <div class="desc">
+                <h3 class="mb-5">UI / UX Design</h3>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-4 text-center d-flex ftco-animate">
+            <a href="#" class="services-1">
+              <span class="icon">
+                <i class="flaticon-analysis"></i>
+              </span>
+              <div class="desc">
+                <h3 class="mb-5">Mobile App UI Design</h3>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-4 text-center d-flex ftco-animate">
+            <a href="#" class="services-1">
+              <span class="icon">
+                <i class="flaticon-flasks"></i>
+              </span>
+              <div class="desc">
+                <h3 class="mb-5">Web UI Design</h3>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-4 text-center d-flex ftco-animate">
+            <a href="#" class="services-1">
+              <span class="icon">
+                <i class="flaticon-ideas"></i>
+              </span>
+              <div class="desc">
+                <h3 class="mb-5">Graphic Design</h3>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-4 text-center d-flex ftco-animate">
+            <a href="#" class="services-1">
+              <span class="icon">
+                <i class="flaticon-analysis"></i>
+              </span>
+              <div class="desc">
+                <h3 class="mb-5">Brand Identity</h3>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-4 text-center d-flex ftco-animate">
+            <a href="#" class="services-1">
+              <span class="icon">
+                <i class="flaticon-flasks"></i>
+              </span>
+              <div class="desc">
+                <h3 class="mb-5">Social Media Design</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section" id="skills-section">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Skills</h1>
+            <h2 class="mb-4">Skills</h2>
+            <p>My design process combines creativity, user-focused thinking, and visual clarity.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 animate-box">
+            <h4>• UI/UX Design: <span style="color: #ffbd39">User Research, Wireframing, Prototyping, User Flow</span></h4>
+            <h4>• Design Tools: <span style="color: #ffbd39">Figma, Adobe Photoshop, Adobe Illustrator</span></h4>
+            <h4>• Visual Design: <span style="color: #ffbd39">Layout, Typography, Color Theory, Iconography</span></h4>
+            <h4>• Branding: <span style="color: #ffbd39">Brand Identity, Social Media Design, Marketing Visuals</span></h4>
+            <h4>• Design Systems: <span style="color: #ffbd39">Components, Consistency, Spacing, Responsive Thinking</span></h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-project" id="projects-section">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>My projects reflect my passion for visual design, branding, and user-centered digital experiences.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/p-4.jpg);">
+              <div class="overlay"></div>
+              <div class="text text-center p-4">
+                <h3><a href="https://www.behance.net/gallery/132725737/_">Logo &amp; Illustration Design</a></h3>
+                <span>Graphic Design</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-8">
+            <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/unvi.jpg);">
+              <div class="overlay"></div>
+              <div class="text text-center p-4">
+                <h3><a href="https://www.behance.net/gallery/197187367/-NATU">Branding &amp; Magazine Design</a></h3>
+                <span>Graphic Design</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-8">
+            <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/Frame\ 1.png);">
+              <div class="overlay"></div>
+              <div class="text text-center p-4">
+                <h3><a href="https://www.behance.net/gallery/247104789/Khedma-Mobile-App">Mobile App UI/UX Design</a></h3>
+                <span>UI/UX Design</span>
+              </div>
+            </div>
+
+            <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/alarab.jpg);">
+              <div class="overlay"></div>
+              <div class="text text-center p-4">
+                <h3><a href="https://www.behance.net/254ba995">Poster Design &amp; Photoshop</a></h3>
+                <span>Graphic Design</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/52.jpg);">
+                  <div class="overlay"></div>
+                  <div class="text text-center p-4">
+                    <h3><a href="https://www.behance.net/gallery/197615875/NATU-Website-test">Website Landing Page Design</a></h3>
+                    <span>UI Design</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/mn.jpg);">
+                  <div class="overlay"></div>
+                  <div class="text text-center p-4">
+                    <h3><a href="https://www.behance.net/gallery/183743685/Pizza-menu">Menu Design &amp; Branding</a></h3>
+                    <span>Graphic Design</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 ftco-animate text-center">
+            <h2>I'm <span>Available</span> for freelance design projects</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact</h2>
+            <p>Let’s connect and discuss your next design project.</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5 justify-content-center">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-map-signs"></span>
+              </div>
+              <h3 class="mb-4">Address</h3>
+              <p>Cairo, Egypt</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-phone2"></span>
+              </div>
+              <h3 class="mb-4">Contact Number</h3>
+              <p><a href="tel://201014641664">+201014641664</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-google"></span>
+              </div>
+              <h3 class="mb-4">Email Address</h3>
+              <p><a href="mailto:alielbana2001@gmail.com">alielbana2001@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">About</h2>
+              <p>a creative designer focused on building modern interfaces and strong visual identities. work combines clarity, creativity, and functionality to deliver engaging digital experiences.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://www.behance.net/254ba995"><span class="icon-behance"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.linkedin.com/in/alielbana1"><span class="icon-linkedin"></span></a></li>
+                <li class="ftco-animate"><a href="https://github.com/Alielbana20"><span class="icon-github"></span></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#home-section"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                <li><a href="#about-section"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                <li><a href="#services-section"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
+                <li><a href="#projects-section"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
+                <li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Services</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>UI / UX Design</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Mobile App UI Design</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Website UI Design</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Graphic Design</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Brand Identity</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Have a Questions?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><span class="icon icon-map-marker"></span><span class="text">Cairo, Egypt</span></li>
+                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">+20 101 464 1664</span></a></li>
+                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">alielbana2001@gmail.com</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+    <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
+      </svg>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+        link.addEventListener('click', function () {
+          const navbarCollapse = document.querySelector('.navbar-collapse');
+          if (navbarCollapse.classList.contains('show')) {
+            new bootstrap.Collapse(navbarCollapse).hide();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
